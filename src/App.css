@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    padding:0;
+    
+}
+.letter-space{
+    letter-spacing: 4px;
+}
+.today-green{
+    color:hsl(163, 72%, 41%);
+}
+.today-red{
+    color: hsl(356, 69%, 56%);
+}
+.youtube-icon{
+   fill: hsl(348, 97%, 39%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.facebook-icon{
+    fill:hsl(208, 92%, 53%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.twitter-icon{
+    fill:hsl(203, 89%, 53%);
 }

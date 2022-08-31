@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-
+import CardsLayout from './components/CardsLayout'
+import Header from './components/Header';
+import  useFetch  from './hooks/useFetch';
+import useTheme from './hooks/useTheme';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const {data, isLoading} = useFetch('/data.json')
+  const {toggleDark, colors} = useTheme()
+  return(
+    <div className="w-full h-full pb-20" style={{backgroundColor: colors.backgroundColor}}>
+        { 
+          !isLoading && 
+          <>            
+            <Header 
+              colors={colors} 
+              toggleDark={toggleDark} 
+              followers={data.total_followers}
+              />
+            <CardsLayout colors={colors}  data={data}  />
+          </>
+        }
     </div>
-  );
+  )
 }
 
 export default App;
